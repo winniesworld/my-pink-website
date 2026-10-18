@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+
+    <script>
+        if ("scrollRestoration" in history) {
+            history.scrollRestoration = "manual";
+        }
+    </script>
+    <title>My Pink Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#home" class="logo">Winnie's World 🎀</a>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#favorites">My favorites</a>
+            <a href="#contact">Contact</a>
+
+            <button id="themeToggle" onclick="toggleTheme()">
+                🌙 Dark Mode
+            </button>
+        </div>
+    </nav>
+
+    <div class="card" id="home">
+        <p class="intro-label">WELCOME TO MY LITTLE WORLD ✨</p>
+
+        <h1>Hi, I'm Winnie! 🎀</h1>
+
+        <p class="=into-text">
+            Creative soul, lover of all beautiful things, and maybe future web developer. ♡︎ 
+        </p>
+        <h1>Welcome☆</h1>
+
+        <p>Pretty things, happy thoughts,just me𐚁.</p
+            
+        <p>𑣲Creating my own little world, one pixel at at time!</p>
+
+        <button onclick="showMessage()">Click Me 💗</button>
+
+        <p id="surpriseMessage" style="display: none;">
+            Well, Hello There!
+        </p>
+    </div>
+    <section class="about" id="about">
+        <h2>About Me 💕</h2>
+        <p>Hi! I'm learning how to build websites.</p>
+        <p>I love cute designs, pink colours and being creative.</p>
+        <p>This is my little space to learn and grow!</p>
+    </section>
+    <section class="gallery" id="gallery">
+        <h2>My Little Gallery 🦋</h2>
+        <p>Some pretty things i love!</p>
+
+        <div class="gallery-container">
+            <div class="gallery-card">
+                <img src="images/flowers.jpg" alt="Pretty flowers">
+                <h3>Flowers 🌸</h3>
+            </div>
+            
+            <div class="gallery-card">
+                <img src="images/bow.jpg" alt="Pink bow">
+                <h3>Pink Bows 🎀</h3>
+            </div>
+
+            <div class="gallery-card">
+                <img src="images/bunny.jpg" alt="Cute bunny">
+                <h3>Little Bunnies 🐰</h3>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="favorites" id="favorites">
+        <h2>Things I Love 💗</h2>
+
+        <h3>⚽︎ I love Neymar Jr. ❤️</h3>
+
+        <img src="images/neymar.jpg" alt="Neymar Jr. footballer" class="neymar-photo">
+
+        <div class="card">
+            <h3>Skincare</h3>
+            <img src="images/skincare.jpg" alt="My skincare" class="skincare-photo">
+                 
+            <p>My Mummy's skincare.🙂💕</p>
+
+        </div>
+        <p class="favorites-intro">
+            My favorites
+        </p>
+
+        <div class="favorites-containers">
+
+            <div class="favorites-card">
+                <span>🎀</span>
+                <h3>I love crocheting</h3>
+                <p>Pretty colours, bows and different patterns.</p>
+            </div>
+
+            <div class="favorites-card">
+                <span>💻</span>
+                <h3>Coding</h3>
+                <p>Learning to create wedsites.</p>
+            </div>
+
+            <div class="favorites-card">
+                <span>🎨</span>
+                <h3>Creativity</h3>
+                <p>Drawing, editing and making new things.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Let's Be Friends! 💌</h2>
+        <p>Want to say hello? I'd love to hear from you!</p>
+
+        <a class="contact-button"
+           href="mailto:winifredadekanbi@icloud.com">
+           Email Me 💗
+        </a>
+
+        <form id="contactForm" action="https://formspree.io/f/xgaoqezb" method="post">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="=name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Write something..." rows="5" required></textarea>
+
+            <button type="submit">Send Message 💌</button>
+        </form>
+        <p id="formMessage"></p>
+
+    </section>
+    <footer class="footer">
+        <p>Thanks for visiting my little world ☆🎀</p>
+        <p>© 2026 Winnie's World. All rights reserved.</p>
+        <a href="#home">Back to the top ⬆</a>
+    </footer>
+    
+    <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑
+    </button>    
+
+<script>
+    function showMessage() {
+        document.getElementById("surpriseMessage").style.display = "block";
+        document.getElementById("surpriseMessage").textContent = "Well, Hello There! 👀";
+    }
+
+    function createHeart() {
+        const heart = document.createElement("span");
+        heart.className = "floating-heart";
+        heart.textContent = "💗";
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (16 + Math.random() * 20) + "px";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        },  5000);
+    }
+
+    setInterval(createHeart, 2500);
+
+    window.addEventListener("scroll", function () {
+        const button = document.getElementById("backToTop");
+
+        if (window.scrollY > 300) {
+            button.classList.add("show");
+        } else {
+            button.classList.remove("show");
+        }
+    });
+
+    function toggleTheme() {
+        document.body.classList.toggle("dark-mode");
+    }
+        const button = document.getElementById("themeToggle");
+
+        if (document.body.classList.contains("dark-mode")) {
+            button.textContent = "☀️ Light Mode";
+        } else {
+            button.textContent = "🌙 Dark Mode";
+        }
+
+        const welcomeText = document.querySelector("h1");
+
+        if (welcomeText) {
+            const originalText = welcomeText.textContent;
+            welcomeText.textContent = "";
+            let letter = 0;
+
+            function typeWelcome() {
+                if (letter <originalText.length) {
+                    welcomeText.textContent += originalText.charAt(letter);
+                    letter++;
+                    setTimeout(typeWelcome, 80);
+                }
+        }
+ 
+        typeWelcome();
+    }
+
+    const contactForm = document.getElementById("contactForm");
+    const formMessage = document.getElementById("formMessage");
+
+    if (contactForm && formMessage) {
+        contactForm.addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.textContent = "Sending... 💌";
+            formMessage.textContent = "";
+
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: "POST",
+                    body: new FormData(contactForm),
+                    headers: {
+                        Accept: "application/json"
+                    }
+                });
+
+                if (response.ok) {
+                    contactForm.reset();
+                    contactForm.style.display = "none";
+                    formMessage.style.display = "block";
+
+                    formMessage.textContent = 
+                        "Thank you for your message! 💗 I'll be happy to hear from you again.";
+
+                } else {
+                    formMessage.textContent = 
+                        "Oops! Your message could not be sent. Please try again. 💕";
+                    submitButton.disabled = false;
+                    submitButton.textContent = "Send Message 💌";
+                }
+            } catch (error) {
+                formMessage.textContent = 
+                    "Something went wrong. Please check your connection and try again. 💕";
+                submitButton.disabled = false;
+                submitButton.textContent = "Send Message 💌";
+            }
+        });
+    }
+
+</script>
+</body>
+</html>
