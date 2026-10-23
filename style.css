@@ -1,0 +1,753 @@
+body {
+    background-color: #fff0f5;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 100px;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.card {
+    background-color: white;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 35px 25px;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(231, 84, 128, 0.15);
+}
+
+h1 {
+    color: #e75480;
+    font-size: 40px;
+}
+
+p {
+    color: #7a5265;
+    font-size: 17px;
+    line-height: 1.6;
+}
+button {
+    background-color: #e75480;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto 35px;
+    padding: 15px 20px;
+    background-color: #ffe4ec;
+    border-radius: 20px;
+}
+
+.logo {
+    color: #e75480;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 18px;
+}
+
+.nav-links a {
+    color: #7a5265;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #e75480;
+}
+
+.about {
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 25px;
+}
+
+.about h2 {
+    color: #e75480;
+}
+
+.about p {
+    color: #7a5265;
+    line-height: 1.6;
+}
+
+.gallery {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 25px;
+}
+
+.gallery > h2 {
+    color: #e75480;
+    text-align: center;
+}
+
+.gallery > p {
+    text-align: center;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery-card {
+    width: 220px;
+    padding: 12px;
+    background-color: #fff0f5;
+    border-radius: 18px;
+    text-align: center;
+}
+
+.gallery-card img {
+    width: 100px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.gallery-card h3 {
+    color: #e75480;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 30px;
+    background-color: #ffe4ec;
+    border-radius: 15px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: #d63384;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #ff69b4;
+}
+
+.contact {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 35px 20px;
+    background-color: #ffe4ec;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.contact h2 {
+    color: #e75480;
+}
+
+.contact p {
+    color: #6b4053;
+}
+
+.contact-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #e75480;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.contact-button:hover {
+    background-color: #d63384;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .card,
+    .about,
+    .gallery,
+    .contact {
+        margin: 20px 12px;
+        padding: 20px;
+    }
+
+    .gallery-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-card {
+        width: 100%;
+        max-width: 280px;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
+
+.floating-heart {
+    position: fixed;
+    bottom: -40px;
+    z-index: 999;
+    pointer-events: none;
+    animation: floatUp 5s linear forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(25deg);
+        opacity: 0;
+    }
+}
+
+.intro-label{
+    color: #e75480;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.intro-text {
+    color: #805268;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.card h1 {
+    color: #e75480;
+    font-size: 38px;
+}
+
+@media (max-width: 600px) {
+    .card h1 {
+        font-size: 25px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#home,
+#about,
+#gallery,
+#contact {
+    scroll-margin-top: 90px;
+}
+
+.footer {
+    margin-top: 50px;
+    padding: 30px 15px;
+    background-color: #ffe4ec;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+    color: #805268;
+}
+
+.footer p {
+    margin: 10px 0;
+}
+
+.footer a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #d63384;
+    font-weight: bold;
+    text-decoration: none
+}
+
+.footer a:hover {
+    color: #ff69b4;
+}
+
+.favorites {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px 20px;
+    background-color: #fff0f5;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.favorites h2 {
+    color: #e75480
+}
+
+.favorites-intro {
+    color: #805268;
+    margin-bottom: 25px;
+}
+
+.favorites-containers {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.favorites-card {
+    flex: 1 1 180px;
+    max-width: 220px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px #f5c5d6;
+}
+
+.favorites-card span {
+    font-size: 35px;
+}
+
+.favorites-card h3 {
+    color: #e75480;
+}
+
+.favorites-card p {
+    color: #805268;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .favorites {
+        margin:20px 12px;
+    }
+}
+
+#backToTop {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #e75480;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    box-shadow:  0 4px 12px #f5c5d6;
+    z-index: 1001;
+    transition: background-color 0.3s transform 0.3s;
+}
+
+#backToTop:hover {
+    background-color: #d63384;
+    transform: translate(-4px);
+}
+
+#backToTop.show {
+    display: block;
+    opacity: 1;
+}
+
+#themeToggle {
+    padding: 9px 14px;
+    border: none;
+    border-radius: 20px;
+    background-color: #e75480;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#themeToggle:hover {
+    background-color: #d63384;
+}
+
+html:has(body.dark-mode) {
+    background-color: #241b2f;
+    color: #fce7f3;
+}
+
+body.dark-mode .card,
+body.dark-mode .about,
+body.dark-mode .gallery,
+body.dark-mode .contact,
+body.dark-mode .favorites,
+body.dark-mode .favorites-card {
+    background-color: #382a45;
+    color: #fce7f3;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p {
+    color: #fce7f3;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .footer {
+    background-color: #30223b;
+}
+
+body.dark-mode .gallery-card {
+    background-color: #4a3658;
+}
+
+body.dark-mode .navbar a,
+body.dark-mode .footer a {
+    color: #ffc1dc;
+}
+
+body.dark-mode,
+body.dark-mode main
+body.dark-mode section,
+body.dark-mode .container {
+    background-color: #0a0a0a !important;
+    color: white;
+}    
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(231, 84, 128, 0.25);
+}
+
+#contact {
+    padding: 40px 20px;
+}
+
+#contact h2 {
+    color: #e75480;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+#contactForm {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 30px;
+    background: linear-gradient(145deg, #ffffff, #fff0f5);
+    border: 1px solid #ffd6e4;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(231, 84, 128, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    border: 1px solid #f3c4d5;
+    border-radius: 14px;
+    background-color: white;
+    color: #444;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border-color: #e75480;
+    box-shadow: 0 0 0 3px rgba(231, 84, 128, 0.12);
+}
+
+#contactForm textarea {
+    resize: vertical;
+}
+
+#contactForm button {
+    padding: 14px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #ff8fb1, #e75480);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 8px;
+}
+
+#formMessage {
+    text-align: center;
+    color: #c44575;
+    margin-top: 15px;
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 25px 18px;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    line-height: 1.6;
+    overflow: break-word;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+}
+
+.neymar-photo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border: 4px solid #f5c542;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skincare-photo {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border-radius: 15px;
+    border: 2px solid #f8c8dc;
+    box-shadow: 0 5px 15px rgba(180, 100, 130, 0.15);
+}
+
+@media screen and (max-width: 600px) {
+
+    body {
+        padding-top: 20px;
+        overflow-x: clip;
+
+    }
+
+    .navbar {
+        position: sticky;
+        top: 0;
+        width: calc(100% - 24px);
+        margin: 0 auto 25px;
+        padding: 12px;
+        gap: 12px;
+        border-radius: 16px;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 14px;
+        width: 100%;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .card,
+    .about,
+    .gallery,
+    .contact,
+    .favorites {
+        width: calc(100% - 24px);
+        max-width: 100%;
+        margin: 24px auto;
+        padding: 22px 16px;
+        border-radius: 22px;
+    }
+
+    h1,
+    .card h1 {
+        font-size: clamp(25px, 7vw, 32px);
+        overflow-wrap: anywhere;
+    }
+
+    .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .gallery-card {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        padding: 8px;
+    }
+
+    .gallery-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .gallery-card h3 {
+        font-size: 14px;
+        overflow-wrap: anywhere;
+    }
+
+    .favorites-containers {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .favorites-card {
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+        padding: 14px 10px;
+        overflow-wrap: anywhere;
+    }
+
+    .favorites-card span {
+        font-size: 28px;
+    }
+
+    .favorites-card h3 {
+        font-size: 15px;
+    }
+
+    .favorites-card p {
+        font-size: 14px;
+    }
+
+    #contactForm {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 14px;
+    }
+    .neymar-photo,
+    .skincare-photo {
+        max-width: 100%;
+    }
+
+    #backToTop {
+        right: 14px;
+        bottom: 18px;
+        width: 44px;
+        height: 44px;
+    }
+
+    .card:hover {
+        transform: none;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    
+    .gallery-container,
+    .favorites-containers {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-card img {
+        height: 180px;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .gallery-container,
+    .favorites-containers {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .gallery-card {
+        min-width: 0;
+    }
+
+    .gallery-card img {
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
