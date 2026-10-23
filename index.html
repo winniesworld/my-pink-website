@@ -211,7 +211,7 @@
             let letter = 0;
 
             function typeWelcome() {
-                if (letter <originalText.length) {
+                if (letter < originalText.length) {
                     welcomeText.textContent += originalText.charAt(letter);
                     letter++;
                     setTimeout(typeWelcome, 80);
@@ -272,6 +272,9 @@
         secretMessage.style.display = "block";
     });
 
+    let name = "Winnie";
+
+    alert("Hello, " + name +"! Welcome to my website 🎀");
 </script>
 </body>
 </html>
